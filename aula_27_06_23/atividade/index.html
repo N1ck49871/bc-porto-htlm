@@ -11,142 +11,182 @@
     <title>Cadastro</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Formulario Cadastro e Login</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Entrar
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="login.html">Login</a></li>
-                <li><a class="dropdown-item" href="index.html">Cadastro</a></li>
-              </ul>
-            </li>
-          </ul>
+    <!-- 
+      <header> -> Estrutura o cabeçalho da página
+      <main> -> Estrutura o corpo principal da página
+      <footer> -> Estrutura o rodapé da página
+      <aside> -> Estrutura uma barra lateral
+      <nav> -> (Navegação) Links 
+      <section> -> Seção da página
+      <article> -> artigos de uma página
+      <div> -> 
+     -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            >Formulario Cadastro e Login</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Entrar
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="login.html">Login</a></li>
+                  <li>
+                    <a class="dropdown-item" href="index.html">Cadastro</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid d-flex justify-content-center mt-5">
+        <form method="get">
+          <h2>Cadastro de Usu&aacute;rio</h2>
+          <fieldset>
+            <legend>Informa&ccedil;&otilde;es Pessoais</legend>
+            <div class="row">
+              <div class="col">
+                <label class="form-label" for="nome">Nome Completo:*</label>
+                <input
+                  maxlength="200"
+                  class="form-control"
+                  id="nome"
+                  type="text"
+                  name="nome"
+                  required />
+              </div>
+              <div class="col">
+                <label class="form-label" for="email">E-mail:*</label>
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  name="email"
+                  required />
+              </div>
+            </div>
+            <label class="form-label" for="senha">Senha:*</label>
+            <input
+              class="form-control"
+              id="senha"
+              type="password"
+              name="senha"
+              required />
+          </fieldset>
+          <fieldset>
+            <legend>Informa&ccedil;&otilde;es de Endere&ccedil;o</legend>
+            <div class="row">
+              <div class="col">
+                <label class="form-label" for="uf">Estado:*</label>
+                <input
+                  class="form-control"
+                  id="uf"
+                  type="text"
+                  name="uf"
+                  required />
+              </div>
+              <div class="col">
+                <label class="form-label" for="cidade">Cidade:*</label>
+                <input
+                  class="form-control"
+                  id="cidade"
+                  type="text"
+                  name="cidade"
+                  required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label class="form-label" for="numero">N&uacute;mero:*</label>
+                <input
+                  class="form-control"
+                  id="numero"
+                  type="text"
+                  name="numero"
+                  required />
+              </div>
+              <div class="col">
+                <label class="form-label" for="cep">CEP:*</label>
+                <input
+                  class="form-control"
+                  id="cep"
+                  type="text"
+                  name="cep"
+                  required
+                  maxlength="9"
+                  pattern="[0-9]{5}-[0-9]{3}"
+                  title="Digite um CEP válido no formato 00000-000"
+                  placeholder="00000-000" />
+              </div>
+            </div>
+            <label class="form-label" for="rua">Rua/Av:*</label>
+            <input
+              name="rua"
+              id="rua"
+              class="form-control"
+              type="text"
+              required />
+          </fieldset>
+          <fieldset>
+            <legend>Outros</legend>
+            <label class="form-label" for="bio"
+              >Conte mais sobre voc&ecirc;:</label
+            >
+            <textarea
+              class="form-control"
+              id="bio"
+              name="bio"
+              cols="30"
+              rows="4"></textarea>
+            <label for="area"
+              >Selecione sua &Aacute;rea de Atua&ccedil;&atilde;o:*</label
+            >
+            <select class="form-select mb-4" name="area" id="area" required>
+              <option value="" selected disabled>
+                Selecione uma &Aacute;rea
+              </option>
+              <option value="fs">Fullstack</option>
+              <option value="cl">Cloud</option>
+              <option value="fs, cl">Ambos</option>
+            </select>
+          </fieldset>
+          <p>Campos Obrigat&oacute;rios*</p>
+          <input class="btn btn-primary" type="submit" value="Enviar" />
+          <input class="btn btn-danger" type="reset" value="Limpar" />
+          <a class="btn btn-dark" href="login.html">Login</a>
+        </form>
       </div>
-    </nav>
-    <div class="container-fluid d-flex justify-content-center mt-5">
-      <form method="get">
-        <h2>Cadastro de Usu&aacute;rio</h2>
-        <fieldset>
-          <legend>Informa&ccedil;&otilde;es Pessoais</legend>
-          <div class="row">
-            <div class="col">
-              <label class="form-label" for="nome">Nome Completo:*</label>
-              <input
-                maxlength="200"
-                class="form-control"
-                id="nome"
-                type="text"
-                name="nome"
-                required />
-            </div>
-            <div class="col">
-              <label class="form-label" for="email">E-mail:*</label>
-              <input
-                class="form-control"
-                id="email"
-                type="email"
-                name="email"
-                required />
-            </div>
-          </div>
-          <label class="form-label" for="senha">Senha:*</label>
-          <input
-            class="form-control"
-            id="senha"
-            type="password"
-            name="senha"
-            required />
-        </fieldset>
-        <fieldset>
-          <legend>Informa&ccedil;&otilde;es de Endere&ccedil;o</legend>
-          <div class="row">
-            <div class="col">
-              <label class="form-label" for="uf">Estado:*</label>
-              <input
-                class="form-control"
-                id="uf"
-                type="text"
-                name="uf"
-                required />
-            </div>
-            <div class="col">
-              <label class="form-label" for="cidade">Cidade:*</label>
-              <input
-                class="form-control"
-                id="cidade"
-                type="text"
-                name="cidade"
-                required />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <label class="form-label" for="numero">N&uacute;mero:*</label>
-              <input
-                class="form-control"
-                id="numero"
-                type="text"
-                name="numero"
-                required />
-            </div>
-            <div class="col">
-              <label class="form-label" for="cep">CEP:*</label>
-              <input
-                class="form-control"
-                id="cep"
-                type="text"
-                name="cep"
-                required
-                maxlength="9"
-                pattern="[0-9]{5}-[0-9]{3}"
-                title="Digite um CEP válido no formato 00000-000"
-                placeholder="00000-000" />
-            </div>
-          </div>
-          <label class="form-label" for="rua">Rua/Av:*</label>
-          <input name="rua" id="rua" class="form-control" type="text" required>
-        </fieldset>
-        <fieldset>
-          <legend>Outros</legend>
-          <label class="form-label" for="bio"
-            >Conte mais sobre voc&ecirc;:</label
-          >
-          <textarea
-            class="form-control"
-            id="bio"
-            name="bio"
-            cols="30"
-            rows="4"></textarea>
-          <label for="area"
-            >Selecione sua &Aacute;rea de Atua&ccedil;&atilde;o:*</label
-          >
-          <select class="form-select mb-4" name="area" id="area" required>
-            <option value="" selected disabled>
-              Selecione uma &Aacute;rea
-            </option>
-            <option value="fs">Fullstack</option>
-            <option value="cl">Cloud</option>
-            <option value="fs, cl">Ambos</option>
-          </select>
-        </fieldset>
-        <p>Campos Obrigat&oacute;rios*</p>
-        <input class="btn btn-primary" type="submit" value="Enviar" />
-        <input class="btn btn-danger" type="reset" value="Limpar" />
-        <a class="btn btn-dark" href="login.html">Login</a>
-      </form>
-    </div>
+    </main>
+    <footer class="container-fluid d-flex justify-content-center mt-5">
+      &copy; Nicolas Alves. Todos os Direitos Reservados.
+    </footer>
     <script>
       window.addEventListener("DOMContentLoaded", function () {
         var cepInput = document.getElementById("cep");
