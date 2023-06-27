@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout da P&aacute;gina</title>
+  </head>
+  <body>
+    <h1>Layout da Página</h1>
+    <div class="container-sm d-flex justify-content-center mt-5">
+      <form action="" method="GET">
+        <fieldset>
+          <legend>Informa&ccedil;&otilde;es Pessoais</legend>
+          <label class="form-label" for="nome">Nome:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="nome"
+            id="nome"
+            maxlength="100"
+            required />
+
+          <label class="form-label" for="email">E-mail:</label>
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            id="email"
+            maxlength="200"
+            required />
+
+          <label class="form-label" for="poderes">Poderes:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="poderes"
+            id="poderes"
+            maxlength="500"
+            required
+            placeholder="Digite seu poderes separado por vírgula" />
+        </fieldset>
+        <fieldset>
+          <legend>Informa&ccedil;&otilde;es de Endere&ccedil;o</legend>
+          <label class="form-label" for="rua">Rua:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="rua"
+            id="rua"
+            maxlength="150"
+            required />
+
+          <label class="form-label" for="numero">Número:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="numero"
+            id="numero"
+            maxlength="10"
+            required />
+
+          <label class="form-label" for="estado">UF:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="estado"
+            id="estado"
+            maxlength="2"
+            required />
+
+          <label class="form-label" for="cidade">Cidade:</label>
+          <input
+            class="form-control"
+            type="text"
+            name="cidade"
+            id="cidade"
+            maxlength="100"
+            required />
+        </fieldset>
+        <button class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
